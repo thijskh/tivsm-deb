@@ -23,7 +23,7 @@ clean:
 	-rm -rf $T
 	dh_clean
 
-build: $T $(TIVSM_ITCAT) $(TIVSM_BA) $(TIVSM_API) $(GSK_CRYPT) $(GSK_SSL)
+build: $T $(TIVSM_BA) $(TIVSM_API) $(GSK_CRYPT) $(GSK_SSL)
 
 $T:
 	mkdir $@
