@@ -3,7 +3,7 @@
 TIVINVFILE="TIVTSMBAC0604.SYS2"
 
 remove_etc_files() {
-  rm -f /etc/TIVGUID /etc/adsm/TSM.PWD /etc/dsm.sys /etc/dsm.opt
+  rm -f /etc/TIVGUID /etc/adsm/TSM.PWD /etc/tivoli/dsm.sys /etc/tivoli/dsm.opt
   rmdir /etc/adsm/ 2> /dev/null || true
 }
 

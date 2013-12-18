@@ -5,12 +5,12 @@
 TIVINVFILE="TIVTSMBAC0604.SYS2"
 
 create_dsm_sys() {
-  [ -e /etc/dsm.sys ] && return
-  cp /usr/share/doc/tivsm/examples/dsm.sys /etc/
+  [ -e /etc/tivoli/dsm.sys ] && return
+  cp /usr/share/doc/tivsm/examples/dsm.sys /etc/tivoli/
 
   local nodename=$(hostname --fqdn || true)
   [ "$nodename" ] || return
-  printf "   NodeName\t\t$nodename\n\n" >> /etc/dsm.sys
+  printf "   NodeName\t\t$nodename\n\n" >> /etc/tivoli/dsm.sys
 }
 
 create_inventory_file() {

@@ -47,7 +47,7 @@ binary-arch: checkroot build
 	dh_testdir
 	dh_prep
 
-	dh_installdirs /etc/ /usr/lib/ /opt/tivoli/tsm/tivinv/
+	dh_installdirs /etc/tivoli/ /usr/lib/ /opt/tivoli/tsm/tivinv/
 	cp -a $T/* $D/
 
 	dh_installdocs
