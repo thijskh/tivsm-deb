@@ -1,0 +1,15 @@
+# $Id: tivoli 65191 2013-12-22 09:45:28Z thijs $
+# $URL: https://its-unix-vc.uvt.nl/its-unix/group/tivoli/etc/logrotate.d/tivoli $
+/var/log/dsm*.log {
+    compress
+    missingok
+    notifempty
+    rotate 4
+    weekly
+    sharedscripts
+    postrotate
+    if [ -f /var/run/dsmc.pid -o -f /var/lock/subsys/dsmc ]; then
+         service dsm restart > /dev/null
+    fi
+    endscript
+}

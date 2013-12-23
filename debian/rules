@@ -105,6 +105,7 @@ endif
 	done
 
 	dh_installinit --name=dsm
+	dh_installlogrotate
 	dh_installchangelogs
 	dh_compress
 	# ICC fails the self-test if modified!
